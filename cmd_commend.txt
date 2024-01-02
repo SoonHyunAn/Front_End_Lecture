@@ -1,0 +1,14 @@
+DOS: 명령어 옵션 파일명
+dir : directory, 현 폴더
+mkdir : directory 생성
+rm : remove, 제거
+
+절대경로(root)		\Workspace\WebProject
+
+상대경로			.	현재 디렉토리
+			.. 	상위 디렉토리
+			디렉토리 명 (\로 시작하지 않는 디렉토리)		
+
+
+\Workspace\WebProject
+\Temp\test
