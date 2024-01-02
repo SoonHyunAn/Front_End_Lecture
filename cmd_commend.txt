@@ -12,3 +12,5 @@ rm : remove, 제거
 
 \Workspace\WebProject
 \Temp\test
+
+파일명을 다 입력하지 말고 TAB을 치면 자동완성기능이 있음!
