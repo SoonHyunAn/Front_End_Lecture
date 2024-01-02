@@ -1,7 +1,7 @@
 # FrontEnd Lecture 2024 01
 
--HTML, CSS, JavaScritp
--jQuery, Bootstrap
+- HTML, CSS, JavaScritp
+- jQuery, Bootstrap
 
 
 
