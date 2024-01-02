@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 리스트 전체 조건 넣기
+<style>
+    li{
+        list-style:decimal;
+        padding-left:15px;
+    }
+</style>
+-->
+    <form action="#">
+    <fieldset>
+        <legend>회원가입</legend>  
+        <ol>
+        <li>이름
+            <input type="text" id="user_name" placeholder="이름"/></li>
+
+        <!-- 
+            label : input 태그가 아닌 다른 요소를 선택하더라도 마치 input 태그가 선택된 것 처럼 도와주는 태그
+            <label for="값">
+                <input id="값">에서 
+            값이 동일해야 함.
+        -->
+        <li>성별
+            <input type="radio" name="g" id="man"/>
+            <label for="man">남자</label>    
+            <input type="radio" name="g" id="woman"/>
+            <label for="woman">여자</label>
+         </li>
+        
+         <!-- 
+            select: 여러 항목중에 하나를 선택하는 태그 - 드롭다운
+            option: 여러 항목
+            
+            selected: 여러개의 옵션중에 기본값으로 저장되는 값. 여러개 지정시 마지막 줄에 있는 항목 선택
+            multiple: 여러개를 선택할 수 있게 해줌 <select multiple> 형식으로 사용. shift를 이용해 선택
+                    selected로 여러개 지정가능
+         -->
+        <li>직업
+            <select>
+            <option> 프로그래머 </option>.
+            <option selected> 학생 </option>
+            <option> 요리사 </option>
+            <option> 강사 </option>
+            </select> 
+        </li>
+
+        <li>취미 <!-- checked : 미리 체크-->
+            <input type="checkbox" id="chk1" checked/> <label for="chk1">잠자기</label>
+            <input type="checkbox" id="chk2"/> <label for="chk2">먹기</label>
+            <input type="checkbox" id="chk3"/> <label for="chk3">숨쉬기</label>
+            <input type="checkbox" id="chk4"/> <label for="chk4">멍때리기</label>
+        </li>
+
+        <li>애인
+            <input type="radio" id="y" name="cc"/> <label for="y">있다</label>
+            <input type="radio" id="n" name="cc"/> <label for="n">없다</label>
+        </li>
+
+        <li> 
+            <div> 
+                <input type="submit" value="확인"/> <!-- <button type="submit" value="확인"> 과 동일-->
+                <input type="reset" value="취소"/> 
+            </div>
+        </li>
+
+        <li> 
+            <textarea cols="80" rows="4"></textarea> 
+            <!-- 시작과 종료 태그를 같이 붙여서 사용해야 초기화된 입력창 형성 가능, cols, rows로 크기조절 -->
+        </li>
+            
+        <li>빈값:
+            <input for="text" required/> 
+        </li>
+
+        <li>사이즈:
+            <input for="text" size="100"/> 
+        </li>
+
+        <li>초기값:
+            <input for="text" value="초기값"/> <!-- placeholder는 값을 입력하면 사라지지만, value는 값이 입력되어 있는 것-->
+        </li>
+
+        <li>초기값 변경x:
+            <input for="text" value="초기값" readonly/>
+        </li>
+
+        <li>입력 한계: 
+            <input for="text" maxlength="5"/> 
+        </li>
+
+        <li>미사용: 
+            <input for="text" disabled> 
+        </li>
+
+    </ol>
+    </fieldset>
+</form>
+
+
+</body>
+</html>

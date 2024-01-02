@@ -1,0 +1,96 @@
+<!--
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{color:red;}
+        .color1{color:rgb(0, 0, 255);}
+        .color2{color:#00FF00;
+        /*256 256 256 을 16진수로 표현*/}
+        .color3{background-color: lightblue;}
+        .color4{
+            background-image: url(test.jpg);
+            background-repeat: no-repeat; /*같은 그림을 반복하지 않음*/
+            background-position: center;
+            height: 300px;
+        } 
+        .color5{
+            /*
+            ltr : left to right
+            rtl : right to left
+            */
+            direction: rtl;
+
+            /*글자사이 간격*/
+            letter-spacing: 10px;
+            /*단어사이 간격-띄어쓰기 기준*/
+            word-spacing: 20px;
+        }
+        .color6{
+            /*문자 들여쓰기*/
+            text-indent: 30px;
+            /*문자 정렬*/
+            text-align: center;
+            direction: rtl; /* 적용 X: direction<text-align */
+            /*글자의 그림자 설정*/
+            text-shadow: 3px 2px lightcoral; /* 이격방향 (오른쪽, 아래), 색*/
+        }
+        .color7{
+            text-decoration: line-through; /* 중앙 실선*/
+        }
+        a {
+            text-decoration: none; /*a태그는 기본적으로 밑선이 있는데, 이를 제거함.*/
+            color: rgb(0, 0, 0) /*a태그는 기본적으로 파란색인데 이를 제거 (검은색).*/
+        }
+
+        p{
+            /*글꼴*/
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        #font1{
+            font-family: Gungsuh;
+            font-style: italic;
+            font-variant: small-caps; /* 소문자 축약 */
+        }
+
+        /*
+        px: 스크린의 픽셀단위, 글자에 몇개의 픽셀을 사용할 것인지, 기본 16px
+        em: 글꼴의 대문자 M의 크기를 기준, 상대적 크기, 기준이 M인 이유는 글꼴이 가장 큼. 가장 많이 사용
+        %: 기본 글꼴 크기와 비교해서 커짐. 
+       */
+        
+       #font2{
+            font-weight: bolder;
+            font-size: 200%;}
+
+        #font3{
+            font-size: 32px;}
+
+        #font4{
+            font-size: 2em;}
+    </style>
+    
+</head>
+<body>
+    <div class="color1"> 색상 테스트 </div>
+    <div class="color2"> 색상 테스트 </div>
+    <div class="color3"> 색상 테스트 </div>
+    <div class="color4"> 색상 테스트 </div>
+    <div class="color5"> 색상 테스트 </div>
+    <div class="color6"> 색상 테스트 </div>
+    <div class="color7"> 색상 테스트 </div>
+
+    <a href="#">이곳은 링크를 위한 태그입니다.</a>
+    <div>Font Testing...! 폰트테스트</div>
+    <p id="font1">Font Testing...! 폰트테스트 </p>
+    <p id="font2">Font Testing...! 폰트테스트 </p>
+    <p id="font3">Font Testing...! 폰트테스트 </p>
+    <p id="font4">Font Testing...! 폰트테스트 </p>
+    <p id="font5">Font Testing...! 폰트테스트 </p>
+</body>
+</html>

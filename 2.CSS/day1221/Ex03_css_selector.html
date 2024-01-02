@@ -1,0 +1,138 @@
+<!--
+    태그를 선택하는 방법 4가지
+    선택자 {스타일속성 = 스타일 속성값}
+
+    1. 태그 선택자 : 태그 이름을 이용한 선택자, 선택의 범위가 가장 큼
+                    HTML 문서상의 모든 태그를 선택하는 방법
+                    
+            태그 이름 {속성:속성값}
+            h1{color:red} => 모든 h1 태그의 색을 red로 변경
+
+    2. id 선택자: id를 이용한 선택자. 동일한 id 를 가지고 있는 태그에만 적용
+                 태그 내의 id 속성을 이용한 선택자, 선택의 범위가 가장 작음 (유일)
+                 id 선택자를 의미하는 키워드 : #
+            #아이디1 {속성 : 속성값}
+            #id {color: red}
+
+    id: 태그의 선택을 돕는 속성, 중복된 아이디 부여 가능하나 css, js에서 선택할 때 문제가 발생할 수 있음
+        *중복이 없도록 작성하는 것이 필수, HTML 문서상에서 유일한 속성값으로 사용.
+    
+    3. class 선택자: 상위 클래스를 이용한 선택자
+                    태그 내의 class 속성을 이용한 선택자, 선택의 범위가 자유로움
+                    class 선택자를 의미하는 키워드 : .
+            .클래스 {속성 : 속성값}
+            .class {color: red}
+
+    class: 태그의 선택을 돕는 속성, 중복된 클래스명으로 부여 가능, 띄어쓰기로 여러개의 클래스명 부여 가능
+           우리가 원하는 대로 태그를 그룹화 하기 위해 사용하는 속성, 일부로 중복을 주는 경우가 많음
+
+    <태그 이름 id="아이디1" class="클래스">
+    <태그 이름 id="아이디2" class="클래스">
+
+    4. 그룹 선택자 : 선택자들을 동긍하게 연결해주는 선택자
+                    키워드 : ,
+            h1, #id, .class {color:red}
+            >>모든 h1 태그와, id="id"와 class="class" 태그를 모두 선택
+
+
+    +++선택자들간의 우선순위
+    태그, id, class + 태그 자체에 쓰인 스타일 속성 (inline 태그)
+    각 태그에 style을 지정해 두었으면 그 부분에 스타일이 우선권을 가짐. (Inline)
+    같은 우선순위를 가지는 선택자를 여러개 적었을 경우 아래에 있는 속성이 우선권을 가짐.
+    
+    1. 같은 선택자를 style 내에서 두번 사용할 경우: 후자의 속성이 적용
+        */
+        div {
+            color: black;
+        }
+        div {
+            color: yellow;
+        }
+        /*
+
+    2. 태그 선택자와 id선택자일 경우: 
+    id 선택자로 선택한 속성값으로 적용 
+    (순서 상관 없음, 선택기 특이성이 id(1, 0, 0)가 태그(0, 0, 1) 보다 높음)
+        #point1{
+            color: red;
+        }
+        div {
+            color : aqua;
+        } 
+
+    3. 태그 선택자와 class 선택자일 경우: 
+    class 선택자로 선택한 속성값으로 적용 
+    (순서 상관 없음, 선택기 특이성dl id(1, 0, 0)가 class(0, 1, 0) 보다 높음)
+        .class1{
+            color: blue;
+        }
+        div {
+            color : aqua;
+        } 
+
+    4. id 선택자와 class 선택자일 경우: 
+    id 선택자로 선택한 속성값으로 적용 
+    (순서 상관 없음, 선택기 특이성이 id(1, 0, 0)가 class(0, 1, 0) 보다 높음)
+        #point1{
+            color: red;
+        }
+        .class1{
+            color: blue;
+        }
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{ 
+            color:red;
+        }
+
+        #point2{
+            color:blue;
+        }
+
+        .point3{
+            color:green;
+        }
+
+        div, #point2, .point3{
+            background-color: cadetblue;
+        }
+        /* 
+        태그이름#id속성명 {}
+        태그이름.class속성명 {} 
+        태그이름#id속성명.class속성명 {} 
+        태그이름#id속성명.class속성명.class속성명 (다중 class 값 선택) {} */
+        p.point3{
+            /* p 태그 중 class가 point3인 태그*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1" class="class1" style="color: brown;"> 안녕하세요 </div>
+    <div id="point1"> 안녕하세요 </div>
+    <div id="point10"> 안녕하세요 </div>
+    <div id="point100"> 안녕하세요 </div>
+    
+    <p> 안녕하세요 </p>
+    <p id="point2"> 안녕하세요 </p>
+    <p id="point2"> 안녕하세요 </p>
+    <p id="point200"> 안녕하세요 </p>
+
+    <p> 안녕하세요2 </p>
+    <p class="point3"> 안녕하세요2 </p>
+    <p class="point3"> 안녕하세요2 </p>
+    <p class="point30"> 안녕하세요2 </p> 
+
+    <div class="point3"> 안녕하세요2</div>
+    <!-- <p class="point3 a0"> = class가 point3과 a0 로 두개를 가지는 것. 둘다 스타일 영향 받음-->
+
+</body>
+</html>

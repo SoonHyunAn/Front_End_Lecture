@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol, ul{ /*기본은 숫자(ol), 점(ul)*/
+            list-style-type: none; 
+            border: 1px solid black;
+
+            background-color: darkseagreen;
+            /*디자인상 들여쓰기가 기본값인 태그-웹 상 Padding 성분*/
+            padding: 0px; /*들여쓰기 제거*/
+
+        }
+
+        li{
+            border: 1px solid red;
+        }
+
+        table{
+            border: 1px solid black;
+            border-collapse: separate; /*collapse 칸 합치기 <-> seperate 나누기*/
+            border-spacing: 20px 30px; /*구분 크기 - 가로, 세로*/
+            width: 20%; /*화면 기준*/
+            height: 75px;
+            background-image: url(test.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 높이는 고정할경우 문제가 되는 경우가 많아 잘 사용하지 않음. 특히 화면에서 잘리는 경우 발생*/
+
+        }
+
+        tr{ /*색이 지정되지 않음 - 보이는 부분이 아님.*/
+            border: 1px solid red;
+        }
+
+        td{
+            border: 1px solid blue;
+            text-align: center; /* 가로 정렬*/            
+            vertical-align: bottom; /*세로 정렬*/
+            /*table에서 적용하면 table 전체에 적용한 것이고, td에하는 것이 정확한 것*/
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>사과</li>
+    <li>딸기</li>
+    <li>바나나</li>
+    <li>수박</li>
+</ol>
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<table>
+    <tr>
+        <td>100</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>400</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#main{
+            width: 500px;
+            margin: auto;
+            padding: 10px
+        }
+
+        div#top{
+            padding: 10px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div#middle{
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            padding: 50px 20px;
+        }
+
+        div#bottom{
+            text-decoration: none;
+        }
+
+        li{
+            text-align: center;
+        }
+
+        ol{
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        a{
+            color:black;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        
+        a#QR_btn{
+            padding: 15px 98px
+        }
+
+        a.login_button{
+            padding: 15px 120px;
+            font-size: 12px;
+            border-radius: 6px; /*둥글게*/
+            font-weight: 400;
+        }
+
+        a.footer, .under{
+            font-size: 8px;
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        a#login_btn:link{
+            background-color: #ffd400;
+        }
+        a#login_btn:hover{
+            background-color: #ffd322a6;
+        }
+        a#login_btn:active{
+            background-color: #ffd34441;
+        }
+        
+        a#QR_btn:link{
+            background-color: #3a3a3a24;
+        }
+        a#QR_btn:hover{
+            background-color: #2f2f2f36;
+        }
+        a#QR_btn:active{
+            background-color: #3636366c;
+        }
+
+        input.login:focus{
+            outline:none; /*로그인 input 클릭했을 때 주위 하이라이트 제거*/
+        }
+
+        input.login{
+            border-width: 0 0 1px;
+            border-color: rgba(197, 205, 213, 0.961);
+            height: 50px;
+            width: 350px;
+            padding: 0px;
+        }
+
+        input::placeholder{
+            font-size: large;
+        }
+
+        a.footer{
+            font-weight: 400;
+        }
+
+        a#personal{
+            font-weight: 600;
+        }
+
+        .hr-sect {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.35);
+            font-size: 12px;
+            margin: 8px 0px;
+        }
+        .hr-sect::before, .hr-sect::after {
+            content: "";
+            flex-grow: 1;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 16px;   /* 마진 값으로 선의 길이를 조절 */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <h1>kakao</h1>
+        </div>
+        <div id="middle">
+            <ol>
+                <div id="inputDIV">
+                    <li>
+                        <input type="text" class="login" size="37" placeholder="카카오메일, 이메일, 전화번호" required >
+                    </li>
+                    <li>
+                        <input type="password" for="user_pw" size="37" class="login" placeholder="비밀번호" required >
+                    </li>
+                </div>
+
+                <div id="btnDIV">
+                    <li>
+                        <br><br>
+                        <a id="login_btn" class="login_button" href="#3"> 로그인 </a> 
+                        <br><br>
+                    </li>
+                    <li>
+                        <div class="hr-sect">또는</div>
+                    </li>
+                    <li>
+                        <br>
+                        <a id="QR_btn" class="login_button" href="#3"> QR코드 로그인 </a> 
+                        <br><br>
+                    </li>
+                    <li>
+                        <a id="create" class="under" style="margin-right: 130px;" href="#2">회원가입</a> 
+                        <a id="find_id" class="under" href="#1">계정 찾기</a>
+                        <a id="create_pw" class="under" href="#5">비밀번호 찾기</a>
+                    </li>
+                </div>
+            </ol>
+        </div>
+        <div id="bottom">
+            <ol>
+                <li>
+                    <a class="footer" href="#2">이용약관</a> 
+                    <a class="footer" id="personal" href="#1">개인정보 처리방침</a>
+                    <a class="footer" href="#5">운영 정책</a>
+                    <a class="footer" href="#1">고객센터</a>
+                    <a class="footer" href="#5">공지사항</a>
+                    <a class="footer" href="#1">한국어</a>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <ol>
+            <li>
+                <p style="font-size: 9px;">Copyright@<b>Kakao Corp.</b> All right reserved.</p>
+            </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

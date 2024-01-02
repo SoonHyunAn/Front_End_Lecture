@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;;
+        }
+        div#main{
+            border:1px solid black;
+            width: 600px;
+            margin-left: 400px;
+            margin-top: 200px;
+            border-radius: 10px;
+            float: left;
+        }
+        h1{
+            padding: 20px 300px 30px 0;
+        }
+        div#head{
+            text-align: center;
+            background-color: lightgray;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        div#main_ground{
+            width: 600px;
+            text-align: center;
+        }
+        div#order{
+            text-align: center;
+            float: left;
+            margin-left: 30px;
+            margin-top: 200px;
+        }
+        div#all{
+            display: inline-block;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+        }
+        img{
+            width: 200px;
+            height: 100px;
+            padding: 15px 0;
+        }
+        button{
+            border: 2px ridge black;
+            padding: 2px;
+        }
+        th{
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="head">
+        <h1>M E N U</h1>
+    </div>
+    <div id="main_ground">
+        <ul>
+            <li>
+                <img src="img/민트카페모카.png"/>
+                <br>
+                <p>민트 카페 모카 3000원</p>
+                <select class="mintcaffemoca">
+                    <option value="0" selected> 0 </option>
+                    <option value="3000"> 1 </option>
+                    <option value="6000"> 2 </option>
+                    <option value="9000"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/아메리카노.png"/>
+                <br>
+                <p>아메리카노 2000원</p>
+                <select class="americano">
+                    <option value="0" selected> 0 </option>
+                    <option value="2000"> 1 </option>
+                    <option value="4000"> 2 </option>
+                    <option value="6000"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/카푸치노.png"/>
+                <br>
+                <p>카푸치노 2500원</p>
+                <select class="caffuchino">
+                    <option value="0" selected> 0 </option>
+                    <option value="2500"> 1 </option>
+                    <option value="5000"> 2 </option>
+                    <option value="7500"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/카페라떼.png"/>
+                <br>
+                <p>카페 라떼 2500원</p>
+                <select class="caffelatte">
+                    <option value="0" selected> 0 </option>
+                    <option value="2500"> 1 </option>
+                    <option value="5000"> 2 </option>
+                    <option value="7500"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/티라미수라떼.png"/>
+                <br> 
+                <p>티라미수 라떼 3500원</p>
+                <select class="tiramishulatte">
+                    <option value="0" selected> 0 </option>
+                    <option value="3500"> 1 </option>
+                    <option value="7000"> 2 </option>
+                    <option value="10500"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/카페모카.png"/>
+                <br>
+                <p>카페 모카 3000원</p>
+                <select class="caffemoca">
+                    <option value="0" selected> 0 </option>
+                    <option value="3000"> 1 </option>
+                    <option value="6000"> 2 </option>
+                    <option value="9000"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/카라메마끼아또.png"/>
+                <br>
+                <p>카라멜 마끼아또 3500원</p>
+                <select class="caramel">
+                    <option value="0" selected> 0 </option>
+                    <option value="3500"> 1 </option>
+                    <option value="7000"> 2 </option>
+                    <option value="10500"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/연유라떼.png"/>
+                <br>
+                <p>연유 라떼 3000원</p>
+                <select class="milk">
+                    <option value="0" selected> 0 </option>
+                    <option value="3000"> 1 </option>
+                    <option value="6000"> 2 </option>
+                    <option value="9000"> 3 </option>
+                </select> 
+            </li>
+            <li>
+                <img src="img/바닐라라떼.png"/>
+                <br>
+                <p>바닐라 라떼 3000원</p>
+                <select class="vanilla">
+                    <option value="0" selected> 0 </option>
+                    <option value="3000"> 1 </option>
+                    <option value="6000"> 2 </option>
+                    <option value="9000"> 3 </option>
+                </select> 
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="order">
+    <div id="head">
+        <h1>주문 내역</h1>
+    </div>
+    <div id="all">
+        <ul>
+            <li>
+                총합: <input type="text" value="sum_value">원<br>
+                <a type="submit" href="#">주문하기</a>        
+            </li>
+        </ul>
+    </div>
+    <div id="order_result">
+        <table id="t01">
+            <tr>
+                <th>목록</th>
+                <th>갯수</th>
+                <th>삭제</th>
+            </tr>
+            <tr class="mintcaffemoca">
+                <td class>민트 카페 모카</td>
+                <td class>2</td>
+                <td class><button type="reset">삭제</button></td>
+            </tr>
+            <tr class="americano">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="caffuchino">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="caffelatte">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="tiramishulatte">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="caffemoca">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="caramel">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="milk">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>            
+            <tr class="vanilla">
+                <td class></td>
+                <td class></td>
+                <td class></td>
+            </tr>
+    </div>
+
+</div>
+</body>
+</html>

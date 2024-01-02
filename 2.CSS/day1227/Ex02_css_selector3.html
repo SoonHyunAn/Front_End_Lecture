@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            동위 선택자: 형제요소(태그), 같은 부모 내의 태그를 가지고 있는 태그
+            sibling(형제): 기준 요소보다 항상 뒤에 존재해야하는 요소만 형제로 선택
+
+            1. 일반 동위 선택자: 기준 요소와 동위 요소를 찾는 선택자, ~로 구분
+                                기준 요소의 형제 요소 선택
+            div ~ p: div 태그의 형제 중 p 태그를 선택, 뒤에 작성된 형제요소만 선택된다.
+
+            2. 인접 동위 선택자: 기준 요소와 "바로 뒤" 동위 요소를 찾는 선택자, +로 구분
+                                기준 요소의 "바로 뒤" 형제 요소 선택
+            div + p: div 태그의 형제 중 "바로 뒤" p 태그를 선택, 뒤에 작성된 형제요소만 선택된다.            
+        */
+        div{
+        border: 2px solid darksalmon;    
+        }
+
+        div ~ p{
+            /* div ~ p: div 태그의 형제 중 p 태그를 선택, 뒤에 작성된 형제요소만 선택된다.*/
+        background-color: cornflowerblue;        
+        } 
+
+        div + p{
+        font-style: italic;
+        text-decoration: underline;        
+        }
+    </style>
+</head>
+<body>
+    <h1>동위선택자</h1>
+    <p>이 p0 태그는 div의 형제이다. 외부 div 앞에 작성</p>
+    <p>이 p1 태그는 div의 형제이다. 외부 div 앞에 작성</p>
+
+    <div>
+        <p>이 p2 태그는 내부 div의 형제이다. 외부 div의 자식이다. 내부 div보다 앞에 작성</p>
+        <div>
+            <p>
+                이 p3 태그는 div의 자식이다. 형제가 없다.
+            </p>
+        </div>
+        <p>이 p4 태그는 내부 div의 형제이다. 외부 div의 자식이다. 내부 div 바로 뒤에 작성. 내부 div의 인접 동위 선택자이다.</p>
+        <p>이 p5 태그는 내부 div의 형제이다. 외부 div의 자식이다. 내부 div 뒤에 작성</p>
+    </div> 
+
+    <p>이 p6 태그는 div의 형제이다. 외부 div 바로 뒤에 작성. 외부 div의 인접 동위 선택자이다.</p>
+    <p>이 p7 태그는 div의 형제이다. 외부 div 뒤에 작성</p>
+</body>
+</html>

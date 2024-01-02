@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        div p:first-child : 
+        >>div 태그 중 하위 요소가 p인 태그(자식) 중 :first-child 구조 찾기
+        가장 첫번째가 p인경우만 탐색, 두번째가 p이므로 적용 X
+        */
+
+        div p:first-child{ /*적용 안됨-가장 첫번째가 div이기 때문*/
+            color:red;
+            font-size: xx-large;
+        }
+
+        /*
+        div p:first-of-type
+        >>div 태그 중 하위 요소가 p인 태그(자식) 중 :first-of-type 구조 찾기
+        모든 p태그 중 첫번째를 탐색.
+        하위요소가 div p p 순서로 적용되어 있고, 처음으로 나오는 p는 div 다음에 나오는 p이기 때문에 두번째에 적용
+        */
+
+        div p:first-of-type{
+            color:blue;
+            font-size: xx-large;
+        }
+        
+        /*
+            tag:first-child: tag명이면서 동시에 첫번째 요소
+            tag:first-of-type: tag명 중에서 첫번째 요소
+        */
+
+        input[type="text"]:first-of-type{
+            border: 10px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1> 구조 가상 클래스 연습 </h1>
+    <div>
+
+        <div>
+            test1
+        </div>
+        <p>
+            test2
+        </p>
+        <p>
+            test3
+        </p>
+    </div>
+
+    <input type="text">
+    <input type="text">
+    <input type="password">
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;;
+        }
+        div#main{
+            border:1px solid black;
+            width: 1000px;
+            margin: auto;
+        }
+        div#head{
+            padding: 50px 0 30px 70px;
+        }
+        div#menu{
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            overflow: auto;
+            margin: 10px;
+        }
+        div#select{
+            float: left;
+        }
+        div#input_search{
+            float: right;
+            margin: 5px 10px 3px;
+        }
+        div#main_ground{
+            overflow: auto;
+            margin: 15px
+        }
+        div#content{
+            padding-top: 50px;
+            float: left;
+        }
+        div#aside{
+            float:right;
+            padding: 50px 130px;
+        }
+        div#aside1{
+            margin-bottom: 30px;
+        }
+        ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        div#footer{
+            margin:300px 15px 15px;
+            border-top: 1px solid gray;
+        }
+        li.title{
+            font-weight: bolder;
+            font-size: 120%;
+        }
+        select{
+            margin: 10px 5px 5px;
+        }
+        img{
+            width: 480px;
+            height: 280px;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="head">
+        <h1>HTML5 Example Preview</h1>
+        <h4>한빛 아카데미</h4>
+    </div>
+        <div id="menu">
+            <div id="select">
+            <select>
+                <option selected> HTML </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+            </select> 
+            <select>
+                <option selected> CSS5 </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+            </select> 
+            <select>
+                <option selected> JavaScript </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+                <option> 기본값 </option>
+            </select> 
+        </div>
+        <div id="input_search">
+            <input type="text"/><input type="submit" value="검색"/>
+        </div>
+    </div>
+    <div id="main_ground">
+        <div id="content">
+            <h2>HTML5 개요와 활용</h2>
+            <br>
+            <p>2019년 02월 14일</p>
+            <img src="apple.jpg" alt="apple">
+            <p>테스트데이터</p>
+        </div>
+        <div id="aside">
+            <div id="aside1">
+                <ul>
+                    <li class="title">카테고리</li>
+                    <li>데이터</li>
+                    <li>데이터</li>
+                    <li>데이터</li>
+                    <li>데이터</li>
+                </ul>
+            </div>
+            <div id="aside2">
+                <ul>
+                    <li class="title">최근 글</li>
+                    <li>데이터</li>
+                    <li>데이터</li>
+                    <li>데이터</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>IT Cookbook HTML5 Programming</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+       
+            선택자 : CSS 스타일 적용할 "대상"을 "선택"하는 방법, 태그를 선택하는 방법
+        
+            전체 선택자                               : * (모든)(별표,애스터리스크,ALL)
+            HTML 요소 선택자 (태그선택자, 요소선택자)   : 태그명을 이용하여 선택                 / 태그명{ }
+            아이디(id) 선택자                         : 태그내의 id 속성을 이용하여 선택        / #아이디{ }
+            클래스(class) 선택자                      : 태그내의 class 속성을 이용하여 선택     / .클래스{ }
+            그룹(group) 선택자                        : 여러 선택자들을 사용하고자할때 ,(쉼표) 구분
+                                                          중복되는 코드를 줄이고 간결함을 위해서 
+            
+            *위 방법 5가지로 태그를 선택할 경우
+            한계점, 풀편한점: 스타일을 적용할 태그에게 id와 class를 모두 부여해야 함.
+
+            *태그들간의 관계를 이용하여 선택하는 방법
+            - 부모, 자식, 형제 등을 통해서 선택
+            #right-content-area > div.Layout-module__right_top___h3g3v > div:nth-child(3) 
+            > div > div.DailyBoardView-module__info_group___f8OSu > div:nth-child(1) 
+            > a.DailyBoardView-module__link_info_detail___miKv5 
+            > div.DailyBoardView-module__info_weather___uEgXj 
+            > div.DailyBoardView-module__weather_icon___MfVmp.DailyBoardView-module__ico_w01___VV3ra
+            
+            #account > div > a
+            
+            - 태그의 상태에 따라 선택
+            - 태그 속성에 따라 선택
+        */
+
+        /*
+            태그의 구조는 상위와 하위로 이루어진 계층구조 (태그안에 태그)
+
+            * 결합 선택자
+            1. 자손 선택자: 해당 요소에서 하위 요소중에 특정 타입을 선택하는 선택 
+            (상위선택자 하위선택자 {스타일})
+            div p {스타일} : div 태그가 상위이며 p태그가 하위태그인 p태그를 선택 -> 공백으로 구분하기 때문에 주의할 것 (띄어쓰기 하는 순간 자손)
+
+            2. 자식 선택자: 해당 요소에서 "바로 밑" 하위 요소중에 특정 타입을 선택하는 선택자
+            (상위선택자 > 하위선택자 {스타일})
+            div > p {스타일} : div태그가 상위이며 p태그가 바로 밑 하위 태그인 p태그를 선택 -> 꺽쇠괄호(>)로 구분
+        */
+        div{
+        border: 2px solid darksalmon;    
+        }
+
+        div p{
+            /*자손 선택자(모든 친척) - div와 p, 모든 p태그를 선택*/
+            background-color: darkseagreen;
+            ;
+        }
+
+        div > p{
+            /*자식 선택자(직계 1촌) - div와 p, 바로 밑 p태그를 선택-span안에 쌓인 p태그는 해당되지 않음. (손자 느낌)*/
+            text-decoration: line-through;
+        } 
+        /*
+            선택의 우선순위가 0, 0, 2로 
+            직접적인 방법인 p만 사용할 때 우선순위인 0, 0, 1보다 높기 때문에 
+            전자가 적용된 후에 후자가 적용되지 않는다.
+        */
+
+        span > p{
+            text-decoration: underline;
+        }
+
+        /* body > div span > p{
+            자손 / 자식 / 자손
+        } */
+
+       /*#daumHead > div.d_head > div > h1 > a > img*/ 
+    </style>
+</head>
+<body>
+    <h1>자손선택자, 자식선택자</h1>
+    <p>div 태그 외부의 p태그</p>
+
+    <div>
+        <p>div 태그 내부의 p태그는 자식 선택자로 선택이 됩니다.</p>
+        <p>div 태그 내부의 p태그는 자식 선택자로 선택이 됩니다.</p>
+        <p>div 태그 내부의 p태그는 자식 선택자로 선택이 됩니다.</p>
+        <span>
+            <p>span 태그 내부의 p태그는 div의 자식 선택자로 선택되지 않습니다. <br> 자손 선택자로만 선택됩니다.</p>
+        </span>
+    </div> 
+
+    <p>div 태그 외부의 p태그</p>
+    
+
+
+</body>
+</html>

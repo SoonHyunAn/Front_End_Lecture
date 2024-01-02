@@ -1,0 +1,32 @@
+<!--
+    css style 적용 방법 
+    1. Inline style: 대상이 하나의 태그
+        <tagName style=""> 태그가 더러워 질 수 있음(많아질 경우)
+    2. 내부 style sheet: 대상이 하나의 HTML 문서
+        <style></style> 가 쓰여진 문서파일
+    3. 외부 style sheet + css 파일 필요
+        css가 필요할 때마다 사용가능 (재활용하기 좋음)
+        <link rel="stylesheet" href="외부 css 파일">
+    ++ 외부 스타일시트파일명은 ~~.css로 생성해 <link> 태그로 연결 (호출)
+    ++ head에서 외부와 내부 스타일의 순서에 따라 우선순위가 적용됨. (나중에 적용된 스타일시트가 적용)
+    ***외부 스타일을 사용하는 이유
+    웹페이지를 구현한느데 핗요한 언어가 다양한데, 이 언어를 하나의 파일에 모든 언어를 사용하게 된다면 너무 복잡,
+    지금 적용한 코드를 다른 페이지에도 적용해야 한다면 복사해서 넣어야 하기 때문. (단순 반복)
+    이를 위해 외부에 공통으로 사용할 파트를 지정해 놓으면 편하게 프로그래밍 가능
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Out_Style_Sheet.css">
+</head>
+<body>
+    <div>테스트</div>
+    <p>인라인 스타일</p>
+    <p>내부 스타일시트</p>
+    <p>외부 스타일시트</p>
+</body>
+</html>
