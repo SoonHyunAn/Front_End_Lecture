@@ -10,7 +10,7 @@ if(M<45){
 else
     M-=45;
 
-if(H==-1)
+if(H<0)
     H=23;
 
 console.log(`${H} ${M}`);
