@@ -23,10 +23,11 @@ let answer =[];
 for(let a=1; a<1000; a++){
     for(let b=1; b<1000; b++){
             c=1000-a-b;
-            if (a+b+c== 1000){ // 다 더한 값이 1000인 경우만 사용
-                if(a*a + b*b == c*c && a < b) // 피타고라스와 크기 비교
+/*             if (a+b+c== 1000){ // 다 더한 값이 1000인 경우만 사용 - 안써도 되넹
+ */                if(a*a + b*b == c*c && a < b) // 피타고라스와 크기 비교
                     answer.push(a, b, c);
-            }
-    }
-}
+/*                     process.exit(0); // 중간에 아에 프로그램을 종료함
+ */            }
+/*     }
+ */}
 console.log(answer);
