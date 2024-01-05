@@ -18,6 +18,20 @@ function maxArray(arr) {
     return numMax;
 }
 
+// 3. 배열에서 제곱의 합 구하기 
+function sumOfSquare(arr) {
+    let sum = 0;
+    for (num of arr) {
+        sum += num * num;
+    }
+    return sum;
+}
+
+
 let sampleArray = [43, 17, 25, 36, 98, 73];
 console.log(sumArray(sampleArray));
 console.log(maxArray(sampleArray));
+
+console.log(sumArray(sampleArray) / sampleArray.length);
+
+console.log(sumOfSquare(sampleArray));
