@@ -28,5 +28,5 @@ year = 2100;
 let result = ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) ? '윤년' : '평년';
 console.log(`${year}은/는 ${result}입니다.`);
 
- 
+
 

@@ -1,8 +1,8 @@
 // 다중 선택 - switch
-let score = Math.ceil(Math.random()*60)+40;
-let grade ="";
+let score = Math.ceil(Math.random() * 60) + 40;
+let grade = "";
 
-switch(parseInt(score/10)){ // 소수점을 버림
+switch (parseInt(score / 10)) { // 소수점을 버림
     case 10:
     case 9:
         grade = 'A'; break;
@@ -14,7 +14,7 @@ switch(parseInt(score/10)){ // 소수점을 버림
         grade = 'D'; break;
     default:
         grade = 'F';
-    }
+}
 
 
 console.log(`점수 ${score}점으로 학점 ${grade} 입니다.`)

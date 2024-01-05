@@ -62,22 +62,22 @@ for(let i = 0; i<5;i++){
     console.log(star);
 } */
 
-let maxDia=7;
-let N = parseInt(maxDia/2);
+let maxDia = 7;
+let N = parseInt(maxDia / 2);
 
-for (i = 0; i <= N; i++){
-    let line ='';
-    for (let k = 0; k < N-i; k++)
-        line+=' ';
-    for (let k = 0; k < 2*i+1; k++)
-        line+='*';
+for (i = 0; i <= N; i++) {
+    let line = '';
+    for (let k = 0; k < N - i; k++)
+        line += ' ';
+    for (let k = 0; k < 2 * i + 1; k++)
+        line += '*';
     console.log(line);
 }
-for (let i = N-1; i >= 0; i--){
-    let star ='';
-    for (let k = 0; k < N-i; k++)
-        star+=' ';
-    for (let k = 0; k<2*i+1; k++)
-        star+='*';
+for (let i = N - 1; i >= 0; i--) {
+    let star = '';
+    for (let k = 0; k < N - i; k++)
+        star += ' ';
+    for (let k = 0; k < 2 * i + 1; k++)
+        star += '*';
     console.log(star);
 }

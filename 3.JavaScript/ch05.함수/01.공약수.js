@@ -1,9 +1,9 @@
 // 함수 사용의 필요성
 
-function getDivisors(num){
-    let divisors =new Set(); //집합 형식
-    for (let i =1 ; i <= num ; i++){
-        if (num % i==0)
+function getDivisors(num) {
+    let divisors = new Set(); //집합 형식
+    for (let i = 1; i <= num; i++) {
+        if (num % i == 0)
             divisors.add(i); // 집합은 add로 넣어줌. 배열은 push
     }
     return divisors;

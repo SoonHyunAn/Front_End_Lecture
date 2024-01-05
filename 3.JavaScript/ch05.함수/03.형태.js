@@ -1,5 +1,5 @@
 // 함수 형태
-// 1. 매개변수(인수)와 반환값이 있는 함수
+// 1. 매개변수(인수)와 반환값이 있는 함수 - 제일 많이 씀
 function sum (from, to){
     let result = 0;
     for (let i = from; i<= to; i++)
@@ -28,3 +28,34 @@ function increment(){
 }
 increment();
 print(globalVar);
+
+// 5. 매개변수 (인수)
+// 매개변수 값을 입력하지 않고 호출하는 함수
+function printFruit(name, count){
+    console.log(`${name} 과일이 ${count}개 있습니다.`);
+}
+printFruit('사과', 10); // 잘 돌아감
+printFruit('귤'); // count가 undefined
+
+function printFruit1(name, count){
+    if (typeof (count) == "undefined")
+        count = 0;
+    console.log(`${name} 과일이 ${count}개 있습니다.`);
+}
+
+printFruit1('배'); 
+
+function printFruit2(name, count){
+    count = count? count:0;
+    console.log(`${name} 과일이 ${count}개 있습니다.`);
+}
+
+printFruit2('오렌지'); 
+
+// count 값을 입력하지 않았을 때 default 값을 0으로
+function printFruit3(name, count = 0){
+    console.log(`${name} 과일이 ${count}개 있습니다.`);
+}
+
+printFruit3('토마토'); 
+

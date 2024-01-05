@@ -9,10 +9,10 @@ console.log(Boolean(0), Boolean(0.0), Boolean(''), Boolean(undefined), Boolean(n
 
 // 자동 변환
 // + 연산자: boolean -> number -> String
-console.log(123 + true, 'bool'+true, 'string'+123); // 정수 변환, 문자열 변환, 문자열 변환
+console.log(123 + true, 'bool' + true, 'string' + 123); // 정수 변환, 문자열 변환, 문자열 변환
 
 // -, *, / 연산자 : Strint -> Number
-console.log(52 - '27', '8' * 8, '4'/2); // 정수 변환, 문자열 변환, 문자열 변환
+console.log(52 - '27', '8' * 8, '4' / 2); // 정수 변환, 문자열 변환, 문자열 변환
 
 
 // 2의 보수 (-연산)
@@ -29,8 +29,8 @@ console.log(52 - '27', '8' * 8, '4'/2); // 정수 변환, 문자열 변환, 문�
 
 // 두개의 값이 같으냐?
 // 1) 변환된 값이 같으면 같다 (==)
-console.log(52=='52', 52==52.0);    // T, T
-console.log(true==1, false==0);     // T, T
+console.log(52 == '52', 52 == 52.0);    // T, T
+console.log(true == 1, false == 0);     // T, T
 // 2) 변환된 값과 자료형이 일치하면 참. (===)
-console.log(52==='52', 52===52.0);    // F, T
-console.log(true===1, false===0);     // F, F
+console.log(52 === '52', 52 === 52.0);    // F, T
+console.log(true === 1, false === 0);     // F, F
