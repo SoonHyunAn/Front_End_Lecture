@@ -27,5 +27,3 @@ function perfectNumber() {
     return result;
 }
 console.log(perfectNumber());
-
-// 

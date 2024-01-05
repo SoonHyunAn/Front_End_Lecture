@@ -58,4 +58,3 @@ function printFruit3(name, count = 0){
 }
 
 printFruit3('토마토'); 
-

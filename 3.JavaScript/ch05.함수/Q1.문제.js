@@ -18,8 +18,6 @@ function maxArray(arr) {
     return numMax;
 }
 
-
 let sampleArray = [43, 17, 25, 36, 98, 73];
-
 console.log(sumArray(sampleArray));
 console.log(maxArray(sampleArray));

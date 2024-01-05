@@ -20,5 +20,3 @@ callFiveTimes(function () {   // 이 방법 X
 callFiveTimes(() => {         // 이 방법 O, 익명 함수로 화살표 함수가 보편적
     console.log('함수가 호출되었습니다.');
 });
-
-
