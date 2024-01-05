@@ -24,3 +24,4 @@ console.log(personInfo.name);       // 주로 사용
 let key = 'job';
 /* console.log(personInfo.key)  */  // Error
 console.log(personInfo[key]);       // 가능 - key 값을 변수로 사용하는 경우
+
