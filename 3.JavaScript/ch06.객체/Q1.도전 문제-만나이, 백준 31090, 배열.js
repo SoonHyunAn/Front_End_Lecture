@@ -35,9 +35,8 @@ function isDivisible(year){
         console.log(year, ' bye');
 }
 
-for(let i = 2023; i<=2040; i++){
+for(let i = 2023; i<=2040; i++)
     isDivisible(i);
-}
 
 
 // 3. array를 매개변수로 받아서 합의 제곱과 제곱의 합의 차이를 구하는 함수를 만들고,
