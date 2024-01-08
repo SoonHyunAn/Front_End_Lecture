@@ -26,6 +26,39 @@ console.log(countArr);
 // 2. 디지털 시계, 00:00 ~ 23:59
 // 하루동안 3이 표시되는 시간은 몇초인가? 답: 29700
 
+//--고찰: 모든 시간을 4글자로 만들어서 하나의 문자열로 만들면?
+let allTimeStr = [];
+let result = 0;
+for (let i = 0; i < 24; i++) {
+    i = String(i);
+    if (i.length == '1')
+        i = '0' + i;
+        console.log(i);
+    for (let k = 0; k < 60; k++){
+        k = String(k);
+        if (k.length == '1')
+            k = '0' + k;
+        allTimeStr.push(i + k);
+    }
+}
+for(time of allTimeStr){
+    for(let i = 0; i< time.length; i++)
+        if(time[i] == 3){
+            result+=60;
+            break;
+        }
+}
+console.log(`3이 포함된 시간초를 모두 더하면 ${result}입니다.`);
+
+/* 
+굳이 할 필요가 없다...
+let oneLine = '';
+for (let i = 0;i <allTimeStr.length; i++){
+    oneLine += allTimeStr[i];
+} */
+
+/* 
+-- 시간과 분에서 각각 3이 포함된 경우의 수를 count 해서 60을 곱해서 진행 --
 let hourCount = 0; // 3이 포함된 시간
 let minCount = 0;  // 3이 포함된 분
 
@@ -55,28 +88,7 @@ for (let i = 0; i < 60; i++) {
 
 let result = hourCount * 3600 + (24 - hourCount) * minCount * 60;
 console.log(result);
-
-/*
---고찰: 모든 시간을 4글자로 만들어서 하나의 문자열로 만들면?
-let allTimeStr = [];
-for (let i = 0; i < 24; i++) {
-    i = String(i);
-    if (i.length == '1')
-        i = '0' + i;
-        console.log(i);
-    for (let k = 0; k < 60; k++){
-        k = String(k);
-        if (k.length == '1')
-            k = '0' + k;
-        allTimeStr.push(i + k);
-    }
-}
-
-let oneLine = '';
-for (let i = 0;i <allTimeStr.length; i++){
-    oneLine += allTimeStr[i];
-}
-*/
+ */
 /*
 --간단하게 하는 방법--
 let totalSec = 0;       // 전체를 0으로 맞춤
