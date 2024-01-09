@@ -6,7 +6,6 @@ let numStr = '';
 for (let i = 1; i <= 1000; i++)
     numStr += i;
 
-console.log(numStr);
 // 1이 몇번?
 for (let i = 0; i <= 9; i++) {
     let pattern = new RegExp('[^' + i + ']', 'g');
@@ -33,18 +32,17 @@ for (let i = 0; i < 24; i++) {
     i = String(i);
     if (i.length == '1')
         i = '0' + i;
-        console.log(i);
-    for (let k = 0; k < 60; k++){
+    for (let k = 0; k < 60; k++) {
         k = String(k);
         if (k.length == '1')
             k = '0' + k;
         allTimeStr.push(i + k);
     }
 }
-for(time of allTimeStr){
-    for(let i = 0; i< time.length; i++)
-        if(time[i] == 3){
-            result+=60;
+for (time of allTimeStr) {
+    for (let i = 0; i < time.length; i++)
+        if (time[i] == 3) {
+            result += 60;
             break;
         }
 }
@@ -56,6 +54,18 @@ let oneLine = '';
 for (let i = 0;i <allTimeStr.length; i++){
     oneLine += allTimeStr[i];
 } */
+
+/* 
+=======강사님 방법=======
+let displayTime = 0;
+for (let hour = 0; hour <= 23; hour++) {
+    for (let minute = 0; minute <= 59; minute++) {
+        let clock = hour + ':' + minute;
+        if (clock.indexOf('3') >= 0)
+            displayTime += 60;
+    }
+}
+*/
 
 /* 
 -- 시간과 분에서 각각 3이 포함된 경우의 수를 count 해서 60을 곱해서 진행 --
@@ -89,6 +99,7 @@ for (let i = 0; i < 60; i++) {
 let result = hourCount * 3600 + (24 - hourCount) * minCount * 60;
 console.log(result);
  */
+
 /*
 --간단하게 하는 방법--
 let totalSec = 0;       // 전체를 0으로 맞춤
@@ -110,19 +121,27 @@ console.log("total seconds: " + totalSec);
 // 3. 두개의 세자리수를 곱해서 나온 결과가 Palindrome일 때
 // 가장 큰 palindrome 수와 그 값은 어떤 수와 어떤 수를 곱해서 나온 결과인가?
 function isPalindrome(str) {
-    str = String(str);
-    let reverseStr = str.split('').reverse().join('');
-    return str == reverseStr;
+    return str == str.split('').reverse().join('');
 }
 
 let all = [];
 let max = 0;
-let num1 = 100, num2 = 100;
+let num1 = 0, num2 = 0;
 for (let i = 100; i <= 999; i++) {
-    for (let k = 100; k <= 999; k++) {
+    for (let k = i; k <= 999; k++) { // 굳이 같은 부분을 또 돌릴 필요가 없기 때문
         let palindrome = i * k;
-        if (isPalindrome(palindrome) == true)
-            all.push(Number(palindrome));
+        if (isPalindrome(String(palindrome)) == true) {
+/*             all.push(Number(palindrome));
+ */            if (Number(palindrome) > max) {
+                max = palindrome;
+                num1 = i;
+                num2 = k;
+            }
+        }
+    }
+}
+/* 
+    }
     }
     for (let num of all) {
         if (num > max)
@@ -132,11 +151,15 @@ for (let i = 100; i <= 999; i++) {
         num1 = i;
         num2 = max / i;
     }
-}
+} */
 console.log(`가장 큰 Palindrome는 ${max}이고, 이는 ${num1} X ${num2}입니다.`);
 
 
 // 4. C:/Workspace/WebProject/03.JavaScript/ch07.표준내장객체/04.String연습.js
 // 에서 파일명(04.String연습.js)만 출력하세요.
 let root = "C:/Workspace/WebProject/3.JavaScript/ch07.표준내장객체/04.String연습.js";
-console.log(root.substring(root.indexOf('4') - 1));
+console.log(root.substring(root.lastIndexOf('/')+1)); // 마지막에 나오는 인덱스 값.
+
+// split 후 맨 마지막 요소
+let pathArr = path.split('/');
+console.log(pathArr[pathArr.length - 1]);
