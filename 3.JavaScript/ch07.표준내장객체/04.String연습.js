@@ -9,6 +9,7 @@ for (let i = 1; i <= 1000; i++)
 // 1이 몇번?
 for (let i = 0; i <= 9; i++) {
     let pattern = new RegExp('[^' + i + ']', 'g');
+    console.log('[^' + i + ']');
     count = numStr.replace(pattern, '').length;
     console.log(`${i}: ${count}`);
 }
@@ -158,7 +159,7 @@ console.log(`가장 큰 Palindrome는 ${max}이고, 이는 ${num1} X ${num2}입�
 // 4. C:/Workspace/WebProject/03.JavaScript/ch07.표준내장객체/04.String연습.js
 // 에서 파일명(04.String연습.js)만 출력하세요.
 let root = "C:/Workspace/WebProject/3.JavaScript/ch07.표준내장객체/04.String연습.js";
-console.log(root.substring(root.lastIndexOf('/')+1)); // 마지막에 나오는 인덱스 값.
+console.log(root.substring(root.lastIndexOf('/') + 1)); // 마지막에 나오는 인덱스 값.
 
 // split 후 맨 마지막 요소
 let pathArr = path.split('/');
