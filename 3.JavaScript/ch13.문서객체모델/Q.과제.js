@@ -46,8 +46,6 @@ function checkWords() {
 function descendingNumber() {
     let num = document.getElementById('num').value;
     let numArray = num.split(';');
-    numArray.sort((a, b) => {
-        return b - a;
-    });
+    numArray.sort((a, b) => b - a);
     document.getElementById('result').innerHTML = numArray.join(', ');
 }
