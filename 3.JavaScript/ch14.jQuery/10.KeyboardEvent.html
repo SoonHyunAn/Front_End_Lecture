@@ -11,7 +11,7 @@
         $(document).ready(() => {
             $('input')
                 .on('keyup', function (e) {
-                    $('#keyup').text($(this).val());    // 글자를 입력할 때마다
+                    $('#keyup').text($(this$('input')).val());    // 글자를 입력할 때마다
                 })
                 .on('change', function (e) {
                     $('#change').text($(this).val());   // 엔터키를 쳤을 때
