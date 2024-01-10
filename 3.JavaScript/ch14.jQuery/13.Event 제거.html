@@ -12,16 +12,13 @@
             // 새로 만든 태그에 이벤트 추가
             const handler = function (e) {
                 $('<h1></h1>').text($(this).text())
-                .on('click', handler)
-                .appendTo('body');
+                    .on('click', handler)
+                    .appendTo('body');
+                // 기존 태그에서는 이벤트 제거
+                $(this).off('click');
             }
-            // 기존 태그에서는 이벤트 제거
-            $(this).off('click');
+            $('h1').click(handler);
         });
-        $('h1').click(handler);
-
-
-
     </script>
 </head>
 
