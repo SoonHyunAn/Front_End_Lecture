@@ -73,7 +73,7 @@
 
             $('#for').ready(function () {
                 const twoDigit = function (num) {
-                    return (num < 10) ? +num : String(num);
+                    return (num < 10) ? '0' + num : String(num);
                 }
                 const myDateTime = function (date) {
                     return `${date.getFullYear()}-${twoDigit(date.getMonth() + 1)}-${twoDigit(date.getDate())} ` +

@@ -23,7 +23,7 @@ console.log('pineapple'.lastIndexOf('p')); // 6 (지정한 값이 마지막에 �
 
 // 문자열을 분리하여 배열을 반환
 let fruits = '사과, 배, 감, 포도';
-let fruitArray = fruits.split(", ");
+let fruitArray = fruits.split(", "); // [ '사과', '배', '감', '포도' ]
 console.log(fruitArray);
 
 // 문자열 일부분
@@ -34,6 +34,7 @@ console.log(today);
 console.log(today.substring(0, 10)); // T의 인덱스까지 0~9까지 잘라옴
 console.log(today.substring(0, today.indexOf('T'))); // T의 인덱스를 자동으로 불러오게 함
 console.log(today.split('T')[0]); // T를 기준으로 잘라서 형성된 배열에서 앞에 값을 씀
+// [ '2024-01-08', '02:06:00.249Z']
 
 // 시간 추출: 02:06:00
 console.log(today.substring(11, 19));
@@ -56,7 +57,7 @@ console.log(myDateTime().substring(11));
 // substring: 두번째 인수를 생략하면 지정위치부터 끝까지, 마지막 인수의 인덱스를 선택할 수 없기 때문에 사용
 
 // 공백제거
-let space = '       Hello?     ';
+let space = '       Hello?        ';
 console.log(space.trim(), ':', space.trimEnd(), ':', space.trimStart()); // 다지움:뒤만지움:앞만지움
 
 // Method Chain
@@ -88,7 +89,7 @@ console.log(spe)
 console.log(hello.indexOf('안녕'));     // 결과값이 0 이상이면 찾는 문자열이 있음
 console.log(hello.indexOf('안늉'));     // 결과값이 0 미만이면 찾는 문자열이 없음
 if (hello.indexOf('안늉') >= 0)
-    console.log('찾고싶은 단어 ${search} 이/가 문장 안에 있습니다.');
+    console.log(`찾고싶은 단어 ${search} 이/가 문장 안에 있습니다.`);
 else
-    console.log('찾고싶은 단어 ${search} 이/가 문장 안에 없습니다.');
+    console.log(`찾고싶은 단어 ${search} 이/가 문장 안에 없습니다.`);
 
