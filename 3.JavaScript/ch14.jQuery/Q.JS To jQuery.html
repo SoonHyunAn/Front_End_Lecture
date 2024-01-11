@@ -49,8 +49,7 @@
                     if (word == search)
                         count++;
                 }
-                $('<span></span>').text(count + '번')
-                    .appendTo('#result2');
+                $('#result2').text(count + '번');
             });
 
             $('#tir').click(function () {
@@ -67,8 +66,7 @@
                 for (let element of newPrices)
                     resultStr += element + ' ';
 
-                $('<span></span>').html(resultStr)
-                    .appendTo('#result3');
+                $('#result3').html(resultStr);
             })
 
             $('#for').ready(function () {
