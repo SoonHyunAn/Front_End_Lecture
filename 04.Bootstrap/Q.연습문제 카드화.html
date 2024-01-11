@@ -21,18 +21,20 @@
             a {
                 text-decoration: none;
             }
-            .card-title{
-                color: blue;
+
+            .card-title {
+                color: yellow;
                 font-weight: bolder;
+                font-size: 20px;
             }
         </style>
     </head>
 
     <body style="margin: 30px;">
         <div class="container mt-5">
-            <div class="row" style="width: 1000px; margin: auto; text-align: center; color:white; padding: 50px; background-color: darkblue;">
+            <div class="row bg-warning text-black text-center">
                 <h1>2024 01 11 과제 <br>
-                이전 과제를 Bootstrap5을 활용해 Card화!</h1>
+                    이전 과제를 Bootstrap5을 활용해 Card화!</h1>
             </div>
         </div>
 
@@ -40,8 +42,8 @@
             <div class="row mt-5">
                 <div class="col mt-5">
                     <div class="card" style="width:500px">
-                        <div class="card-body" style="width: 500px;">
-                            <h1 class="card-title">Q1. 2의 거듭제곱</h1>
+                        <div class="card-body">
+                            <h1 class="card-title bg-secondary text-center">Q1. 2의 거듭제곱</h1>
                             <input type="text" id="num1" class='alert' placeholder="1~20 사이의 정수">
                             <br>
                             <input type="text" id="num2" class='alert' placeholder="10~30 사이의 정수">
@@ -54,8 +56,8 @@
                 </div>
                 <div class="col mt-5">
                     <div class="card" style="width:500px">
-                        <div class="card-body" style="width: 500px;">
-                            <h1 class="card-title">Q2. 특정 단어의 갯수</h1>
+                        <div class="card-body">
+                            <h1 class="card-title bg-secondary text-center">Q2. 특정 단어의 갯수</h1>
                             <textarea id="sentence" cols="30" rows="5" placeholder="찾고싶은 문장"></textarea><br>
                             <br>
                             <input type="text" id="search" placeholder="찾을 단어">
@@ -69,24 +71,23 @@
             <div class="row mt-5">
                 <div class="col mt-5">
                     <div class="card" style="width:500px">
-                        <div class="card-body" style="width: 500px;">
-                            <h1 class="card-title">Q3. 내림차순 정렬</h1>
-                            <p class="card-text" style="font-size: 15px;">
-                                51900;83000;158000;367500;250000;59200;128500;1304000
-                            </p>
-                            <input type="text" id="price" placeholder="가격을 ;으로 분리해서 입력">
-                            <br><br>
-                            <a id="tir" class="btn btn-primary">확인</a>
-                            <br>
-                            <span id="result3"></span>
-                            </p>
-                        </div>
+                        <div class="card-body"></div>
+                        <h1 class="card-title bg-secondary text-center">Q3. 내림차순 정렬</h1>
+                        <p class="card-text" style="font-size: 15px;">
+                            51900;83000;158000;367500;250000;59200;128500;1304000
+                        </p>
+                        <input type="text" id="price" placeholder="가격을 ;으로 분리해서 입력">
+                        <br><br>
+                        <a id="tir" class="btn btn-primary">확인</a>
+                        <br>
+                        <span id="result3"></span>
+                        </p>
                     </div>
                 </div>
                 <div class="col mt-5">
                     <div class="card" style="width:500px">
-                        <div class="card-body" style="width: 500px;">
-                            <h1 class="card-title">Q4. 디지털 시계</h1>
+                        <div class="card-body">
+                            <h1 class="card-title bg-secondary text-center">Q4. 디지털 시계</h1>
                             <br><br>
                             <h2 id="date"></h2>
                             <br><br>
